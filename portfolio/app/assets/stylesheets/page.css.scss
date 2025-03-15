@@ -1,0 +1,87 @@
+/* Header Section */
+.header {
+  background-color: #4a90e2;
+  padding: 20px 0;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+
+  a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #ffcc70;
+    }
+  }
+}
+
+/* Main Section with Background Image */
+.main-section {
+  text-align: center;
+  padding: 150px 20px;
+
+  /* Background Image */
+  background: url('/assets/background.jpg') no-repeat center center/cover;
+  color: white;
+
+  /* Optional: Add a dark overlay for better text contrast */
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); // Dark overlay for readability
+    z-index: 0;
+  }
+
+  /* Ensure content is above the overlay */
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .tagline {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: #357ab7;
+    }
+  }
+}
